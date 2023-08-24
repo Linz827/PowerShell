@@ -12,6 +12,9 @@ $appsToRemove = @(
     "Microsoft.XboxGamingOverlay"                
     "Microsoft.XboxIdentityProvider" 
     "Microsoft.XboxSpeechToTextOverlay"
+    "Microsoft.GamingApp"
+    "Microsoft.BingNews"                         
+    "Microsoft.BingTranslator"
     "Microsoft.ZuneVideo"
     "AD2F1837.HPPCHardwareDiagnosticsWindows"    
     "AD2F1837.HPPowerManager"                   
@@ -20,6 +23,8 @@ $appsToRemove = @(
     "AD2F1837.HPSupportAssistant"                
     "AD2F1837.HPSystemInformation"               
     "AD2F1837.myHP"
+    "Microsoft.Windows.ParentalControls"
+    "Microsoft.WindowsFeedbackHub"
 )
 
 # Remove Windows apps
