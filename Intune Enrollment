@@ -1,0 +1,20 @@
+From Windows OOBE Screen: 
+Shift-F10 
+
+Run Powershell: 
+powershell 
+
+Set Execution Policy command: 
+set-ExecutionPolicy bypass 
+
+Install Autopilot Script: 
+Install-Script -Name 
+Get-WindowsAutopilotInfo -Force 
+Select "Y" at prompt 
+
+Run Script to import Hardware ID into Intune: 
+Get-WindowsAutopilotInfo -Online 
+
+Log in with 365 Admin Credentials to authenticate 
+
+Once complete, device should now appear in Autopilot List ready to assign.
