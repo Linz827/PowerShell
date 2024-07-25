@@ -1,0 +1,14 @@
+# Define the OneDrive folder path
+$OneDrivePath = "$env:USERPROFILE\OneDrive"
+
+# Get the sync status of files in the OneDrive folder
+$SyncStatus = Get-ChildItem -Path $OneDrivePath -Recurse | Select-Object FullName, Attributes
+
+# Check if any files are still syncing
+$SyncingFiles = $SyncStatus | Where-Object { $_.Attributes -match 'Offline' -or $_.Attributes -match 'Temporary' }
+
+if ($SyncingFiles.Count -eq 0) {
+    Write-Output "OneDrive is fully synced."
+} else {
+    Write-Output "OneDrive is still syncing."
+}
